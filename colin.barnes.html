@@ -1,0 +1,168 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bingo for colin.barnes</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .bingo-wrapper {
+                margin-bottom: 50px;
+                width: 100%;
+                max-width: 500px;
+            }
+            .bingo-card {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 5px;
+            }
+            .bingo-cell {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border: 2px solid #333;
+                font-size: 20px;
+                font-weight: bold;
+                color: #555;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+                aspect-ratio: 1;  /* Makes each cell a square */
+            }
+            .bingo-cell.free-space {
+                background-color: #28a745;
+                color: white;
+                cursor: default;
+            }
+            .bingo-cell.clicked {
+                background-color: #28a745;
+                color: white;
+            }
+            @media (max-width: 600px) {
+                .bingo-cell {
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: 400px) {
+                .bingo-cell {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bingo for colin.barnes</h1>
+        <div class="bingo-wrapper">
+            <h2>Bingo Card 1</h2>
+            <div class="bingo-card">
+    <div class="bingo-cell" onclick="toggleCell(this)">8</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">18</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">25</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">33</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">47</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">6</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">15</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">29</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">36</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">43</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">10</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">17</div>
+    <div class="bingo-cell free-space" onclick="toggleCell(this)">Free</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">38</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">50</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">2</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">11</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">26</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">34</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">41</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">4</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">12</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">27</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">37</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">45</div>
+</div>
+
+            <h2>Bingo Card 2</h2>
+            <div class="bingo-card">
+    <div class="bingo-cell" onclick="toggleCell(this)">5</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">17</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">29</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">38</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">46</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">1</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">19</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">25</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">34</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">42</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">4</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">11</div>
+    <div class="bingo-cell free-space" onclick="toggleCell(this)">Free</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">37</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">48</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">10</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">12</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">28</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">36</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">47</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">6</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">18</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">24</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">33</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">43</div>
+</div>
+
+            <h2>Bingo Card 3</h2>
+            <div class="bingo-card">
+    <div class="bingo-cell" onclick="toggleCell(this)">6</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">19</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">25</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">36</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">42</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">1</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">11</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">28</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">35</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">41</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">5</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">18</div>
+    <div class="bingo-cell free-space" onclick="toggleCell(this)">Free</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">33</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">46</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">8</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">20</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">26</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">40</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">45</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">9</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">16</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">21</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">34</div>
+    <div class="bingo-cell" onclick="toggleCell(this)">48</div>
+</div>
+
+        </div>
+        <footer>
+            Click the numbers to mark them as called.
+        </footer>
+        <script>
+            function toggleCell(element) {
+                element.classList.toggle('clicked');
+            }
+        </script>
+    </body>
+    </html>
+    
